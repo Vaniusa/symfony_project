@@ -1,0 +1,46 @@
+<?php
+namespace Vaniusa\ProductsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+ /**
+  *@ORM\Entity
+  *@ORM\Table(name="products")
+  */
+
+     class Products
+     {
+         /**
+          * @ORM\Column(type="integer")
+          * @ORM\Id
+          * @ORM\GeneratedValue(strategy="AUTO")
+          */
+         private $id;
+
+         /**
+          * @ORM\Column(type="string", length=65)
+          * @Assert\NotBlank()
+          * @Assert\Length(min = 3, minMessage = "El nombre tiene un minimo de  {{ limit }} caracteres")
+          */
+         private $nombre;
+
+         /**
+          * @ORM\Column(type="string", length=65)
+          * @Assert\NotBlank()
+          */
+         private $category;
+
+         /**
+          * @ORM\Column(type="string", length=255)
+          * @Assert\NotBlank()
+          * @Assert\Length(min = 30, minMessage = "La descripcion tiene un minimo de  {{ limit }} caracteres")
+          */
+         private $description;
+
+         /**
+          * @ORM\Column(type="integer")
+          * @Assert\NotBlank()
+          */
+         private $price;
+     }

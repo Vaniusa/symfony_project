@@ -1,0 +1,17 @@
+{% extends '@VaniusaProducts/base.html.twig' %}
+{% block title %}Mostrar productos{% endblock %}
+{% block body %}
+    <h2>Mostrando todos los productos</h2>
+    <ul>
+        {% for product in products %}
+        <li>
+            <p>Id: {{ product.id }}</p>
+            <p>Nombre: {{ product.nombre }}
+            <a href="{{ path('vaniusa_products_mostrar', {'id': product.id}) }}">Ver mas</a>
+            <a href="{{ path('vaniusa_products_editar', {'id': product.id}) }}">Editar producto</a>
+                <a href="{{ path('vaniusa_products_eliminar', {'id': product.id}) }}">Eliminar producto</a>
+            <hr />
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

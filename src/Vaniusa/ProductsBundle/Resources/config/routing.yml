@@ -1,0 +1,31 @@
+vaniusa_products_homepage:
+    path:     /
+    defaults: { _controller: VaniusaProductsBundle:Products:index }
+
+
+vaniusa_products_mostrar:
+    path:     /mostrar/{id}
+    defaults: { _controller: VaniusaProductsBundle:Products:mostrar }
+
+vaniusa_products_crear:
+    path:     /crear
+    defaults: { _controller: VaniusaProductsBundle:Products:crear }
+    requirements: {_method: post }
+
+vaniusa_products_nuevo:
+    path:     /nuevo
+    defaults: { _controller: VaniusaProductsBundle:Products:nuevo }
+
+vaniusa_products_editar:
+    path:     /editar/{id}
+    defaults: { _controller: VaniusaProductsBundle:Products:editar }
+
+vaniusa_products_actualizar:
+    path:     /actualizar/{id}
+    defaults: { _controller: VaniusaProductsBundle:Products:actualizar }
+    requirements: {_method: post|put}
+
+vaniusa_products_eliminar:
+    path:     /eliminar/{id}
+    defaults: { _controller: VaniusaProductsBundle:Products:eliminar }
+    requirements: {_method: post|delete}

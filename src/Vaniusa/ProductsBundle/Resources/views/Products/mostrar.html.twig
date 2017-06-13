@@ -1,0 +1,9 @@
+{% extends '@VaniusaProducts/base.html.twig' %}
+{% block title %}Mostrar el producto{% endblock %}
+{% block body %}
+    <h2>Detalle del producto: {{ product.nombre }}</h2>
+    <p>Categoria: {{ product.category }}</p>
+<p>Descripcion: {{ product.description }}</p>
+    <p>Precio: {{ product.price }}</p>
+    <a href="{{ path('vaniusa_products_homepage')}}">Ver todos los productos</a>
+{% endblock %}

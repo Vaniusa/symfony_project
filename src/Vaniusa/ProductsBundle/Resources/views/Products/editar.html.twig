@@ -1,0 +1,6 @@
+{% extends '@VaniusaProducts/base.html.twig' %}
+{% block title %}Editar producto{% endblock %}
+{% block body %}
+    <h2>Editor de producto</h2>
+{{ form(form) }}<a href="{{ path('vaniusa_products_homepage') }}">Volver al listado</a>
+{% endblock %}
